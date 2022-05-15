@@ -33,15 +33,19 @@ h1 {
     box-shadow: 5px 5px 10px black, -5px 5px 10px black;
 }
 
-div {
-    margin-top: 10px;
-}
-
 input {
     margin-left: 6px;
     border: 1px solid black;
 }
-
+.inputDivs{
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#colorqty {
+    width: 2rem;
+}
 .submit {
     margin: 10px;
     padding: 3px 7px;
@@ -96,6 +100,7 @@ option {
 #colorError, #errQty {
     color: red;
     font-size: 16px;
+    margin-left: 5px;
 }
 
 .about {
@@ -103,4 +108,42 @@ option {
     width: 60%;
     border-bottom: 1px solid black;
     padding-bottom: 20px;
+}
+
+#hex {
+    width:10rem;
+}
+select, option {
+    text-transform: uppercase;
+}
+@media (max-width: 500px) {
+    .container{
+        width: 100%;
+        min-width: 400px;
+    }
+
+    .about {
+        width:90%;
+        padding: 10px;
+        margin: 0 auto;
+    }
+
+    div {
+        padding:5px;
+    }
+
+    .inputDivs {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+    }
+
+    .inputDivs select, .inputDivs input {
+        margin-left: 10px;
+    }
+    .inputDivs select, .inputDivs input, .inputDivs label, .inputDivs span {
+        font-size: 14px;
+    }
+    
 }

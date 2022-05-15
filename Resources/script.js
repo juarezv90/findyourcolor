@@ -21,6 +21,8 @@ const handleChange = () => {
 const displayThreeValue = (value) => {
   let labels = document.getElementsByClassName("rgblabels");
   let rgbInputs = document.getElementsByClassName("colorIn");
+  document.getElementById('colorError').innerHTML ='';
+  document.getElementById("hex").style.border = regBorderStyle;
 
   for (label of labels) {
     label.style.display = "inline-block";
@@ -90,6 +92,7 @@ const onSchemeChange = (scheme) => {
     document.getElementById("colorqty").value = 5;
   } else {
     document.getElementById("colorqty").disabled = true;
+    document.getElementById("colorqty").value = '';
   }
 };
 
@@ -124,8 +127,8 @@ function inputs() {
     qty.style.border = regBorderStyle;
     document.getElementById('errQty').innerHTML ='';
   }
-
-
+  document.getElementById('errQty').innerHTML ='';
+  document.getElementById('colorError').innerHTML ='';
   return true;
 }
 

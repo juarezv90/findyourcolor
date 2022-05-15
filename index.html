@@ -25,16 +25,16 @@
         </p>
       </div>
 
-      <div>
+      <div class="inputDivs">
         <label for="color">Pick Color Input Type</label>
         <select id="color" onchange="handleChange()">
-          <option value="hex">Hex Value</option>
+          <option value="hex">Hexcode</option>
           <option value="rgb">RGB</option>
           <option value="hsl">HSL</option>
         </select>
       </div>
 
-      <div>
+      <div class="inputDivs">
         <label for="hex" id="hexLabel">Hex Value</label
         ><input type="text" id="hex" />
         <label for="one" class="rgblabels">R</label>
@@ -67,7 +67,7 @@
         <span id="colorError"></span>
       </div>
 
-      <div>
+      <div class="inputDivs">
         <label for="scheme">Pick Scheme</label>
         <select name="scheme" id="scheme" onchange="onSchemeChange(this)">
           <option value="none">No Scheme</option>
@@ -82,9 +82,9 @@
         </select>
       </div>
 
-      <div>
+      <div class="inputDivs">
         <label for="colorqty" class="colorQtyLab"
-          >How many colors for scheme</label
+          >Scheme Quantity</label
         >
         <input type="number" id="colorqty" class="colorqty" disabled />
         <span id="errQty"></span>
