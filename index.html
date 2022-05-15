@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Color API</title>
+    <link rel="stylesheet" href="Resources/style.css" />
+  </head>
+
+  <body>
+    <div class="container">
+      <h1>The Color Finder</h1>
+      <div class="about">
+        <p class="abText">
+          Hello and welcome to the color finder. This application uses the color
+          api from
+          <a href="https://www.thecolorapi.com/" target="_blank"
+            >The Color API Project</a
+          >. Please feel free to check out the api site. Down Below you'll be
+          able to select how you would like to find your color as well as pick
+          schemes for color pattern base on the api and input. The out put will
+          be selectable text that can be copied and pasted into any document
+          that accept hexcode, rgb or hsl values.
+        </p>
+      </div>
+
+      <div>
+        <label for="color">Pick Color Input Type</label>
+        <select id="color" onchange="handleChange()">
+          <option value="hex">Hex Value</option>
+          <option value="rgb">RGB</option>
+          <option value="hsl">HSL</option>
+        </select>
+      </div>
+
+      <div>
+        <label for="hex" id="hexLabel">Hex Value</label
+        ><input type="text" id="hex" />
+        <label for="one" class="rgblabels">R</label>
+        <input
+          type="number"
+          class="colorIn"
+          id="one"
+          min="0"
+          max="360"
+          onchange="inputOnchange(this)"
+        />
+        <label for="two" class="rgblabels">G</label>
+        <input
+          type="number"
+          class="colorIn"
+          id="two"
+          min="0"
+          max="256"
+          onchange="inputOnchange(this)"
+        />
+        <label for="three" class="rgblabels">B</label>
+        <input
+          type="number"
+          class="colorIn"
+          id="three"
+          min="0"
+          max="256"
+          onchange="inputOnchange(this)"
+        />
+        <span id="colorError"></span>
+      </div>
+
+      <div>
+        <label for="scheme">Pick Scheme</label>
+        <select name="scheme" id="scheme" onchange="onSchemeChange(this)">
+          <option value="none">No Scheme</option>
+          <option value="monochrome">monochrome</option>
+          <option value="monochrome-dark">monochrome-dark</option>
+          <option value="monochrome-light">monochrome-light</option>
+          <option value="analogic">analogic</option>
+          <option value="complement">complement</option>
+          <option value="analogic-complement">analogic-complement</option>
+          <option value="triad">triad</option>
+          <option value="quad">quad</option>
+        </select>
+      </div>
+
+      <div>
+        <label for="colorqty" class="colorQtyLab"
+          >How many colors for scheme</label
+        >
+        <input type="number" id="colorqty" class="colorqty" disabled />
+        <span id="errQty"></span>
+      </div>
+
+      <input
+        type="button"
+        value="Submit"
+        class="submit"
+        onclick="submitted(inputs())"
+      />
+
+      <div id="colorHolder">
+        <!-- -->
+      </div>
+    </div>
+
+    <script src="Resources/script.js"></script>
+    <script src="Resources/contactapi.js"></script>
+  </body>
+</html>

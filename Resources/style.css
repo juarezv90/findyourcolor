@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+    font-size: 16px;
+    color:black;
+}
+body {
+    background-color: hsla(200, 98%, 48%, 1);
+}
+a {
+    text-decoration: none;
+    color: blue;
+}
+h1 {
+    font-size: 2.5rem;
+    border-bottom: 1px solid black;
+    margin: 10px auto;
+}
+
+.container {
+    width: 80%;
+    height: auto;
+    min-height:100vh;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgba(256, 256, 256, .5);
+    box-shadow: 5px 5px 10px black, -5px 5px 10px black;
+}
+
+div {
+    margin-top: 10px;
+}
+
+input {
+    margin-left: 6px;
+    border: 1px solid black;
+}
+
+.submit {
+    margin: 10px;
+    padding: 3px 7px;
+}
+
+.submit:hover {
+    background-color: rgb(70, 25, 192);
+    color: rgb(256 256 256)
+}
+
+#hex {
+    width: 6rem;
+}
+
+.rgblabels,
+.colorIn {
+    display: none;
+}
+
+option {
+    text-transform: capitalize;
+}
+
+#colorHolder {
+    width: 70%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.colored {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-width: 200px;
+    min-height: 200px;
+    border: 1px solid black;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    margin-left: 10px;
+}
+
+.colored p {
+    background-color: rgba(256,256,256, .2);
+    border-radius: 5px;
+    padding: 2px 5px;
+}
+
+#colorError, #errQty {
+    color: red;
+    font-size: 16px;
+}
+
+.about {
+    margin: 20px auto;
+    width: 60%;
+    border-bottom: 1px solid black;
+    padding-bottom: 20px;
+}
