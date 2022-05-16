@@ -64,8 +64,8 @@ const removeRGB = () => {
 const inputOnchange = (value) => {
   const sb = document.querySelector("#color");
   if (sb.value == "rgb") {
-    if (value.value > 256) {
-      document.getElementById(value.id).value = 256;
+    if (value.value > 255) {
+      document.getElementById(value.id).value = 255;
     } else if (value.value < 0) {
       document.getElementById(value.id).value = 0;
     }
